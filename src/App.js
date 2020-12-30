@@ -1,10 +1,16 @@
 
-import './App.css';
-import { useEffect, useState } from 'react';
+//import './App.css';
+
+
+
+//import components
+import NavBar from './components/NavBar';
+import DataPanel from './components/DataPanel';
+
 
 function App() {
 
-  const [apiData, setApiData] = useState([{}])
+
   /*useEffect( ()=>{
    fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then((response) => response.json())
@@ -18,7 +24,7 @@ function App() {
       <p>{apiData.title}</p>
   */
 
-/*below code will fetch api from github */ 
+  /*below code will fetch api from github */
   /*useEffect( ()=>{
     async function fetchData(){
     const responseApi =await fetch('https://api.github.com/users/mumtazmaqsood/repos')
@@ -40,49 +46,18 @@ function App() {
     </div>
   );
 }*/
-//---------------------------------------------------------------------
+  //---------------------------------------------------------------------
 
 
-let [isFetching, setFetching] = useState(false);
-let [getFlag, setFlag] = useState([])
 
-useEffect( ()=>{
-  async function fetchData(){
-  setFetching(true)
-  const responseApi =await fetch('https://restcountries.eu/rest/v2/all')
-  let data = await responseApi.json()
-  console.log(data);
 
- 
-  //setFlag(flagData)
-  setApiData(data)
-  setFetching(false)
-  }
-  fetchData();
-}, [])
-
-if(isFetching){
-  return <div>Api Fetching Data ...</div>
-}
-
-return (
-  <div className="App">
-    <h1>Country Information</h1>
-    <ul>
-    {apiData.map( (countryObj, ind) => {
-      return(
-      <li key={ind}>
-        {countryObj.name}
-        {countryObj.nativeName}
-        {countryObj.region}
-        {countryObj.population}
-        {countryObj.timezones}
-        <img src={countryObj.flag} width="20" height="20" />
-      </li>)
-    })}
-    </ul>
-  </div>
-);
+  return (
+    <div className="App">
+      <NavBar />
+      <DataPanel />
+      <h1>Country Information</h1>
+    </div>
+  );
 }
 
 export default App;
