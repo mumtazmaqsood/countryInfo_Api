@@ -1,9 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
-
-
-
 function BarChart({panelData}) {
     console.log("paneldata", panelData)
 
@@ -42,9 +39,10 @@ function BarChart({panelData}) {
               width={150}
               height={150}
               options={{
-                maintainAspectRatio: false
+              maintainAspectRatio: false
               }}
             />}
+            
              
         </div>
     );

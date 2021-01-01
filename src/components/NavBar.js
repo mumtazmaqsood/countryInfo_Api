@@ -71,9 +71,9 @@ export default function NavBar() {
       <AppBar position="static">
         <Toolbar>
          
-          {/* <Typography className={classes.title} variant="h6" noWrap>
-            {/* Country Information }
-          </Typography> */}
+          <Typography className={classes.title} variant="h6" noWrap>
+             World's Population Statistics 
+          </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

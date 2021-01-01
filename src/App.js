@@ -1,13 +1,6 @@
 
-//import './App.css';
-
-
-
-//import components
 import NavBar from './components/NavBar';
 import DataPanel from './components/DataPanel';
-import BarChart from './BarChart';
-import fetch_apiData from './context/GlobalState';
 
 
 function App() {

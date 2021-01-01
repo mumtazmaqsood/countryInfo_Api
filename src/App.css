@@ -1,28 +1,18 @@
-body {
-    background-color: lightslategray;
-    display: flex;
+
+
+
+ .zoom {
     
-}
-
-
-
-li {
-    float: left;
-    list-style-type: none;
-    width: 50vh;
-    border: 2px solid red;
-    margin: 30px;
-    box-shadow: 5px 5px 5px 2px lightcyan;
-    justify-content: space-between;
     
-}
+    transition: transform .2s; /* Animation */
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 
-li:hover{
-    background-color: lightsteelblue;
-    
-}
 
-img {
-    justify-items: right;
-    border: 2px solid red;
-}
+  
