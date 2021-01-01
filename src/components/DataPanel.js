@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         float: 'right'      
     },  
 }));
-
+let data;
 export default function InfoPanel() {
     const classes = useStyles();
     const [countries, setCountries] = useState([])
@@ -65,7 +65,7 @@ export default function InfoPanel() {
         return <div>Api Fetching Data ...</div>
     }
 
-    let data /*data for pie chart*/
+    //let data /*data for pie chart*/
 
     return (
         <div className={classes.root}>
@@ -81,7 +81,7 @@ export default function InfoPanel() {
                     (<Grid item xs={12} sm={4} key={idx}>
                         <Paper className={classes.paper} elevation={3}>
                             <strong >{key.name}</strong>
-                            <div className="zoom"><img className={classes.img1} src={key.flag} width="30" height="30" /></div><br /><br />
+                            <div className="zoom"><img className={classes.img1} src={key.flag} width="30" height="30" alt="Flag" /></div><br /><br />
                             <div ><Pie data = { data = {
                                 labels: [
                                     [key.name, "has", ((key.population/7794798739)*100).toPrecision(2), "%", "of"],

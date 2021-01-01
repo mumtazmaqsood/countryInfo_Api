@@ -7,12 +7,17 @@ function BarChart({panelData}) {
     let populationArray = []
     let countryArray = []
 
-    Object.keys(panelData).map( obj => {
+    let a  = Object.keys(panelData).map( (obj) => {  
         if(panelData[obj].population > 180000000){
             populationArray.push(panelData[obj].population)
             countryArray.push(panelData[obj].name)
         }
     })
+
+    console.log(a)
+
+    
+    
 
 
     const data = {
