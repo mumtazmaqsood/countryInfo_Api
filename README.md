@@ -1,5 +1,5 @@
 # APP URL
-http://world-p.surge.sh/
+http://world-api.surge.sh/
 
 
 # TECHNOLOGY USED
