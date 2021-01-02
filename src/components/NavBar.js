@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
+
+import DataPanel from '../components/DataPanel';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,6 +66,8 @@ const useStyles = makeStyles((theme) => ({
 export default function NavBar() {
   const classes = useStyles();
 
+  let search1 = useState('');
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -77,7 +81,9 @@ export default function NavBar() {
               <SearchIcon />
             </div>
             <InputBase
+              type = "text"
               placeholder="Search Country..."
+              onChange = {(e) => search1[1](e.target.value)}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
@@ -87,6 +93,7 @@ export default function NavBar() {
           </div>
         </Toolbar>
       </AppBar>
+      <DataPanel search={search1} />
     </div>
   );
 }

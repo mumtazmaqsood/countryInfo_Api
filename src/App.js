@@ -1,6 +1,6 @@
 
 import NavBar from './components/NavBar';
-import DataPanel from './components/DataPanel';
+
 
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
     
     <div className="App">
       <NavBar />
-      <DataPanel />
+      {/* <DataPanel /> */}
     </div>
     
   );
