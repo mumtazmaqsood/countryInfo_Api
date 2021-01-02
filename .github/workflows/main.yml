@@ -35,7 +35,7 @@ jobs:
           cmd: install
 
       # Installing React
-      - name: Build book-tracker app 
+      - name: Build app 
         run: yarn build
       
       # installing surge
